@@ -299,12 +299,12 @@ if (empty($_SESSION['superadmin'])) {
               if ($aksi == "tambahsatuan") {
                 include "page//satuanbarang/tambahsatuan.php";
               }
-              if ($aksi == "ubahsupplier") {
-                include "page/supplier/ubahsupplier.php";
+              if ($aksi == "ubahsatuan") {
+                include "page/satuanbarang/ubahsatuan.php";
               }
 
-              if ($aksi == "hapussupplier") {
-                include "page/supplier/hapussupplier.php";
+              if ($aksi == "hapussatuan") {
+                include "page/satuanbarang/hapussatuan.php";
               }
             }
 

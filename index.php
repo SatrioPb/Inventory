@@ -5,7 +5,7 @@ session_start();
 
 
 
-$koneksi = new mysqli("localhost", "root", "", "amanah");
+require('koneksi.php');
 
 if (empty($_SESSION['admin'])) {
 
@@ -401,7 +401,7 @@ if (empty($_SESSION['admin'])) {
         <footer class="sticky-footer bg-white">
           <div class="container my-auto">
             <div class="copyright text-center my-auto">
-              <span>Copyright &copy; 2019 . Sistem Informasi Inventaris Barang</span>
+              <span>Copyright &copy; Amanah Bakerey</span>
             </div>
           </div>
         </footer>

@@ -49,9 +49,6 @@
 		<div class="row">
 		<div class="center">
 		<div class="login">
-				
-				
-				
 				<form role="form" action="" method="post">
 				<h3> Sistem Inventaris Barang</h3>
 				<br>
@@ -69,7 +66,6 @@
 							<option value="superadmin">Super Admin</option>
 							<option value="admin">Admin</option>
 							<option value="petugas">Petugas</option>
-						
 						</select>
 					</div>
 					<div class="form-group">
@@ -98,7 +94,7 @@
 					$level = $_POST['level'];
 					
 					if ($login) {
-						$sql = $koneksi->query("select * from users where username='$username' and password='$password'");
+						$sql = $koneksi->query("select * from users where username='$username' and password='$password' and level='$level'");
 						$ketemu = $sql->num_rows;
 						$data = $sql->fetch_assoc();
 						

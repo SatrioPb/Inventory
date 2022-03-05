@@ -27,11 +27,11 @@
 
 							<form method="POST" enctype="multipart/form-data">
 							
-							<label for="">NIK</label>
+							<!-- <label for="">NIK</label>
                             <div class="form-group">
                                <div class="form-line">
                                 <input type="number" name="nik" value="<?php echo $tampil['nik']; ?>" class="form-control" />
-	 
+	  -->
 							</div>
                             </div>
 							
@@ -73,7 +73,7 @@
                                <div class="form-line">
                                     <select name="level" class="form-control show-tick">
                                         <option value="">-- Pilih Level --</option>
-										 <option value="superadmin">Super Admin</option>
+										 <!-- <option value="superadmin">Super Admin</option> -->
                                         <option value="admin">Admin</option>
                                         <option value="petugas">Petugas</option>
                      

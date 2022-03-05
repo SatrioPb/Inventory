@@ -5,7 +5,7 @@ session_start();
 
 
 
-$koneksi = new mysqli("localhost", "root", "", "amanah");
+require('koneksi.php');
 
 if (empty($_SESSION['petugas'])) {
 
@@ -259,12 +259,12 @@ if (empty($_SESSION['petugas'])) {
               if ($aksi == "tambahsatuan") {
                 include "page//satuanbarang/tambahsatuan.php";
               }
-              if ($aksi == "ubahsupplier") {
-                include "page/supplier/ubahsupplier.php";
+              if ($aksi == "ubahsatuan") {
+                include "page/satuanbarang/ubahsatuan.php";
               }
 
-              if ($aksi == "hapussupplier") {
-                include "page/supplier/hapussupplier.php";
+              if ($aksi == "hapussatuan") {
+                include "page/satuanbarang/hapussatuan.php";
               }
             }
 
@@ -344,7 +344,7 @@ if (empty($_SESSION['petugas'])) {
         <footer class="sticky-footer bg-white">
           <div class="container my-auto">
             <div class="copyright text-center my-auto">
-              <span>Copyright &copy; 2021 . Sistem Inventaris Barang</span>
+              <span>Copyright &copy; Amanah Bakerey</span>
             </div>
           </div>
         </footer>

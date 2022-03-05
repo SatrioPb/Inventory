@@ -17,7 +17,7 @@
           <!-- DataTales Example -->
           <div class="card shadow mb-4">
             <div class="card-header py-3">
-              <h6 class="m-0 font-weight-bold text-primary">Ubah User</h6>
+              <h6 class="m-0 font-weight-bold text-primary">Ubah Gudang</h6>
             </div>
             <div class="card-body">
               <div class="table-responsive">
@@ -51,7 +51,7 @@
 								
 								<?php
 								
-								$sql = $koneksi -> query("select * from jenis_barang order by id");
+								$sql = $koneksi -> query("select * from barang order by id");
 								while ($data=$sql->fetch_assoc()) {
 									echo "<option value='$data[id].$data[jenis_barang]'>$data[jenis_barang]</option>";
 								}

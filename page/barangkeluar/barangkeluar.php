@@ -17,7 +17,7 @@
                 <thead>
                                         <tr>
 											<th>No</th>
-											<th>Id Transaksi</th>
+											<!-- <th>Id Transaksi</th> -->
 											<th>Tanggal Keluar</th>
 											<th>Kode Barang</th>
 											<th>Nama Barang</th>
@@ -42,7 +42,7 @@
 									
                                         <tr>
                                             <td><?php echo $no++; ?></td>
-											<td><?php echo $data['id_transaksi'] ?></td>
+											<!-- <td><?php echo $data['id_transaksi'] ?></td> -->
 											<td><?php echo $data['tanggal'] ?></td>
 											<td><?php echo $data['kode_barang'] ?></td>
 											<td><?php echo $data['nama_barang'] ?></td>
