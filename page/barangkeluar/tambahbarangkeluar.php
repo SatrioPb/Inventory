@@ -123,7 +123,7 @@ $tanggal_keluar = date("Y-m-d");
 						
 						
 							
-							<input type="submit" name="simpan" value="Simpan" class="btn btn-primary">
+							<input type="submit" name="simpan" value="Simpan" class="btn" style="background-color: #A0512B;color:white;">
 							
 							</form>
 							

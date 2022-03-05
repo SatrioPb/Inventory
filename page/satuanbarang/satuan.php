@@ -49,7 +49,7 @@
 
 										   </tbody>
                                 </table>
-								<a href="?page=satuanbarang&aksi=tambahsatuan" class="btn btn-primary" >Tambah Satuan Barang</a>
+								<a href="?page=satuanbarang&aksi=tambahsatuan" class="btn" style="background-color: #A0512B;color:white;">Tambah Satuan Barang</a>
                   </tbody>
                 </table>
               </div>

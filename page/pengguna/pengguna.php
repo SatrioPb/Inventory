@@ -47,7 +47,7 @@
 
                 <!-- <td><?php echo $data['password'] ?></td> -->
                 <td><?php echo $data['level'] ?></td>
-                
+
                 <td>
                   <a href="?page=pengguna&aksi=ubahpengguna&id=<?php echo $data['id'] ?>" class="btn btn-success">Ubah</a>
                   <a onclick="return confirm('Apakah anda yakin akan menghapus data ini?')" href="?page=pengguna&aksi=hapuspengguna&id=<?php echo $data['id'] ?>" class="btn btn-danger">Hapus</a>
@@ -57,7 +57,7 @@
 
           </tbody>
         </table>
-        <a href="?page=pengguna&aksi=tambahpengguna" class="btn btn-primary">Tambah</a>
+        <a href="?page=pengguna&aksi=tambahpengguna" class="btn" style="background-color: #A0512B;color:white;">Tambah</a>
         </tbody>
         </table>
       </div>

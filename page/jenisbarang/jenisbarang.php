@@ -44,7 +44,7 @@
 
           </tbody>
         </table>
-        <a href="?page=jenisbarang&aksi=tambahjenis" class="btn btn-primary">Tambah Jenis Barang</a>
+        <a href="?page=jenisbarang&aksi=tambahjenis" class="btn" style="background-color: #A0512B;color:white;">Tambah Jenis Barang</a>
         </tbody>
         </table>
       </div>

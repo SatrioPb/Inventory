@@ -59,7 +59,7 @@
 
           </tbody>
         </table>
-        <a href="?page=gudang&aksi=tambahgudang" class="btn btn-primary">Tambah Data Barang</a>
+        <a href="?page=gudang&aksi=tambahgudang" class="btn" style="background-color: #A0512B;color:white;">Tambah Data Barang</a>
         </tbody>
         </table>
       </div>

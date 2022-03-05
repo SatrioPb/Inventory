@@ -68,7 +68,7 @@
 
 					</tbody>
 				</table>
-				<a href="?page=barangmasuk&aksi=tambahbarangmasuk" class="btn btn-primary">Tambah</a>
+				<a href="?page=barangmasuk&aksi=tambahbarangmasuk" class="btn" style="background-color: #A0512B;color:white;">Tambah</a>
 				</tbody>
 				</table>
 			</div>

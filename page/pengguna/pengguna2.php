@@ -52,7 +52,7 @@
 
           </tbody>
         </table>
-        <a href="?page=pengguna&aksi=tambahpengguna2" class="btn btn-primary">Tambah</a>
+        <a href="?page=pengguna&aksi=tambahpengguna2" class="btn" style="background-color: #A0512B;color:white;">Tambah</a>
         </tbody>
         </table>
       </div>

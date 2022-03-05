@@ -47,7 +47,7 @@
 
 										   </tbody>
                                 </table>
-								<a href="?page=supplier&aksi=tambahsupplier" class="btn btn-primary" >Tambah Data Supplier</a>
+								<a href="?page=supplier&aksi=tambahsupplier" class="btn" style="background-color: #A0512B;color:white;" >Tambah Data Supplier</a>
                   </tbody>
                 </table>
               </div>

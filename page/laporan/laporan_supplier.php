@@ -50,7 +50,7 @@
 										   </tbody>
                                 </table>
 								
-								<a href="page/laporan/export_laporan_supplier_excel.php"  class="btn btn-primary" style="margin-top:8 px"><i class="fa fa-print"></i>ExportToExcel</a>
+								<a href="page/laporan/export_laporan_supplier_excel.php"  class="btn" style="background-color: #A0512B;color:white;margin-top:8 px"><i class="fa fa-print"></i>ExportToExcel</a>
                   </tbody>
                 </table>
               </div>
