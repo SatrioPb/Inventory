@@ -13,7 +13,7 @@
   <?php 
   
   
-$koneksi = new mysqli("localhost","root","","amanah");
+$koneksi = new mysqli("localhost","root","","amanah2");
 $no = mysqli_query($koneksi, "select id_transaksi from barang_keluar order by id_transaksi desc");
 $idtran = mysqli_fetch_array($no);
 $kode = $idtran['id_transaksi'];

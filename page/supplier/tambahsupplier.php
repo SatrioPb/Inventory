@@ -4,7 +4,7 @@
 
 
 
-$koneksi = new mysqli("localhost","root","","amanah");
+$koneksi = new mysqli("localhost","root","","amanah2");
 $no = mysqli_query($koneksi, "select kode_supplier from tb_supplier order by kode_supplier desc");
 $kdsupplier = mysqli_fetch_array($no);
 $kode = $kdsupplier['kode_supplier'];

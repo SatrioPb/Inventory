@@ -3,7 +3,7 @@
 	
 	
 	
-	$koneksi = new mysqli("localhost","root","","amanah");
+	$koneksi = new mysqli("localhost","root","","amanah2");
 
 	
 	

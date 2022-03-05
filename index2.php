@@ -221,7 +221,7 @@ if (empty($_SESSION['petugas'])) {
 
             if ($page == "supplier") {
               if ($aksi == "") {
-                include "page/supplier/supplier.php";
+                include "page/supplier/supplier_petugas.php";
               }
               if ($aksi == "tambahsupplier") {
                 include "page//supplier/tambahsupplier.php";
