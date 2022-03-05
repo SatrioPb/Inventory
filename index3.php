@@ -81,7 +81,7 @@ if (empty($_SESSION['superadmin'])) {
 
       <li class="d-flex align-items-center justify-content-center">
         <a class="nav-link">
-          <img style="border-radius: 50%" src="img/<?php echo $data['foto'] ?>" class="img-circle" width="100" height="100" alt="User" /></a>
+          <!-- <img style="border-radius: 50%" src="img/<?php echo $data['foto'] ?>" class="img-circle" width="100" height="100" alt="User" /></a> -->
       <li class="d-flex align-items-center justify-content-left">
       </li>
       </li>
