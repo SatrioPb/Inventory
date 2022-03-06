@@ -7,12 +7,10 @@ session_start();
 
 require('koneksi.php');
 
-if (empty($_SESSION['admin'])) {
+if (empty($_SESSION['superadmin'])) {
 
   header("location:login.php");
 }
-
-
 
 
 
@@ -46,6 +44,15 @@ if (empty($_SESSION['admin'])) {
   <!-- Custom styles for this page -->
   <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 
+  <!-- datatable -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.6.5/css/buttons.dataTables.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
 
 </head>
 
@@ -59,10 +66,10 @@ if (empty($_SESSION['admin'])) {
 
       <!-- Sidebar - Brand -->
       <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
-        <div class="sidebar-brand-icon rotate-n-15">
+        <div class="sidebar-brand-icon rotate-n-1">
           <i class="fas fa-building"></i>
         </div>
-        <div class="sidebar-brand-text mx-2">Amanah Bakery</div>
+        <div class="sidebar-brand-text mx-2">Amanah Bakerey</div>
       </a>
 
       <!-- Divider -->
@@ -70,8 +77,8 @@ if (empty($_SESSION['admin'])) {
 
 
       <?php
-      if ($_SESSION['admin']) {
-        $user = $_SESSION['admin'];
+      if ($_SESSION['superadmin']) {
+        $user = $_SESSION['superadmin'];
       }
       $sql = $koneksi->query("select * from users where id='$user'");
       $data = $sql->fetch_assoc();
@@ -83,15 +90,15 @@ if (empty($_SESSION['admin'])) {
 
       <li class="d-flex align-items-center justify-content-center">
         <a class="nav-link">
-          <img src="img/<?php echo $data['foto'] ?>" class="img-circle" width="80" alt="User" /></a>
-      <li class="d-flex align-items-center justify-content-center">
+          <img style="border-radius: 50%" src="img/<?php echo $data['foto'] ?>" class="img-circle" width="100" height="100" alt="User" /></a>
+      <li class="d-flex align-items-center justify-content-left">
       </li>
       </li>
       <li class="nav-item ">
         <a class="nav-link">
           <div class="d-flex align-items-center justify-content-center" class="name"> <?php echo  $data['nama']; ?></div>
           </font>
-          <div class="d-flex align-items-center justify-content-center" class="email"><strong> <?php echo $data['level']; ?></strong></div>
+          <div class="d-flex align-items-center justify-content-center" class="email"><?php echo $data['level']; ?></div>
         </a>
       </li>
 
@@ -100,7 +107,7 @@ if (empty($_SESSION['admin'])) {
 
       <!-- Nav Item - Dashboard -->
       <li class="nav-item active">
-        <a class="nav-link" href="?page=home">
+        <a class="nav-link" href="?page=home3">
           <i class="fas fa-fw fa-home"></i>
           <span>Dashboard</span></a>
       </li>
@@ -133,8 +140,8 @@ if (empty($_SESSION['admin'])) {
             <h6 class="collapse-header">Menu:</h6>
             <a class="collapse-item" href="?page=gudang">Data Barang</a>
             <a class="collapse-item" href="?page=jenisbarang">Jenis Barang</a>
-            <!-- <a class="collapse-item" href="?page=satuanbarang">Satuan Barang</a>
-            <a class="collapse-item" href="?page=supplier">Data Supplier</a> -->
+            <a class="collapse-item" href="?page=satuanbarang">Satuan Barang</a>
+            <a class="collapse-item" href="?page=supplier">Data Supplier</a>
 
           </div>
         </div>
@@ -176,8 +183,8 @@ if (empty($_SESSION['admin'])) {
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Menu Laporan:</h6>
             <a class="collapse-item" href="?page=laporan_supplier">Laporan Supplier</a>
-            <a class="collapse-item" href="?page=laporan_gudang">Laporan Stok Gudang</a>
             <a class="collapse-item" href="?page=laporan_barangmasuk">Laporan Barang Masuk</a>
+            <a class="collapse-item" href="?page=laporan_gudang">Laporan Stok Gudang</a>
             <a class="collapse-item" href="?page=laporan_barangkeluar">Laporan Barang Keluar</a>
           </div>
         </div>
@@ -222,7 +229,6 @@ if (empty($_SESSION['admin'])) {
               <div class="top-menu">
                 <ul class="nav pull-right top-menu">
 
-
                   <li><a onclick="return confirm('Apakah anda yakin akan logout?')" class="btn btn-danger" class="logout" href="logout.php">Keluar</a></li>
                 </ul>
               </div>
@@ -247,10 +253,17 @@ if (empty($_SESSION['admin'])) {
 
             if ($page == "pengguna") {
               if ($aksi == "") {
-                include "page/pengguna/pengguna2.php";
+                include "page/pengguna/pengguna_superadmin.php";
               }
-              if ($aksi == "tambahpengguna2") {
-                include "page/pengguna/tambahpengguna2.php";
+              if ($aksi == "tambahpengguna") {
+                include "page/pengguna/tambahpengguna_superadmin.php";
+              }
+              if ($aksi == "ubahpengguna") {
+                include "page/pengguna/ubahpengguna.php";
+              }
+
+              if ($aksi == "hapuspengguna") {
+                include "page/pengguna/hapuspengguna.php";
               }
             }
 
@@ -383,10 +396,10 @@ if (empty($_SESSION['admin'])) {
 
 
             if ($page == "") {
-              include "home.php";
+              include "home_superadmin.php";
             }
-            if ($page == "home") {
-              include "home.php";
+            if ($page == "home3") {
+              include "home_superadmin.php";
             }
             ?>
 
@@ -438,6 +451,17 @@ if (empty($_SESSION['admin'])) {
   <!-- Page level custom scripts -->
   <script src="js/demo/datatables-demo.js"></script>
 
+  <!-- datatable -->
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/buttons/1.6.5/js/dataTables.buttons.min.js"></script>
+  <script src="https://cdn.datatables.net/buttons/1.6.5/js/buttons.flash.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+  <script src="https://cdn.datatables.net/buttons/1.6.5/js/buttons.html5.min.js"></script>
+  <script src="https://cdn.datatables.net/buttons/1.6.5/js/buttons.print.min.js"></script>
+
   <!--script for this page-->
   <script>
     jQuery(document).ready(function($) {
@@ -475,7 +499,7 @@ if (empty($_SESSION['admin'])) {
     });
   </script>
 
-  <script type="text/javascript">
+  <!-- <script type="text/javascript">
     jQuery(document).ready(function($) {
       $(function() {
         $('#Myform1').submit(function() {
@@ -518,9 +542,18 @@ if (empty($_SESSION['admin'])) {
         });
       });
     });
+  </script> -->
+
+  <script>
+    $(document).ready(function() {
+      $('#mauexport').DataTable({
+        dom: 'Bfrtip',
+        buttons: [
+          'copy', 'csv', 'excel', 'pdf', 'print'
+        ]
+      });
+    });
   </script>
-
-
 
 
 

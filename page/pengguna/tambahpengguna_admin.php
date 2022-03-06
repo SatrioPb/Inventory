@@ -62,8 +62,8 @@
                                <div class="form-line">
                                     <select name="level" class="form-control show-tick">
                                         <option value="">-- Pilih Level --</option>
-										 <!-- <option value="superadmin">Super Admin</option> -->
-                                        <option value="admin">Admin</option>
+									
+                                        <!-- <option value="admin">Admin</option> -->
                                         <option value="petugas">Petugas</option>
                      
                                     </select>
@@ -103,7 +103,7 @@
 								
 								if ($upload) {
 								
-								$sql = $koneksi->query("insert into users (nik, nama, telepon, username, password, level, foto) values('$nik','$nama','$telepon','$username','$password','$level','$foto')");
+									$sql = $koneksi->query("insert into users (nik, nama,alamat,  telepon, username, password, level, foto) values('$nik','$nama','','$telepon','$username','$password','$level','$foto')");
 								
 								if ($sql) {
 									?>

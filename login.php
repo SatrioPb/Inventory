@@ -63,14 +63,14 @@ require('koneksi.php');
 						<div class="form-group">
 							<input type="password" name="password" class="form-control" placeholder="Masukan Password" required autofocus />
 						</div>
-						<div class="form-group">
+						<!-- <div class="form-group">
 							<select name="level" class="form-control" required>
 								<option value="">Pilih Level User</option>
 								<option value="superadmin">Super Admin</option>
 								<option value="admin">Admin</option>
 								<option value="petugas">Petugas</option>
 							</select>
-						</div>
+						</div> -->
 						<div class="form-group">
 							<input type="submit" name="login" class="btn btn-block" style="background-color: #A0512B;color:white;" value="Masuk" />
 
@@ -95,28 +95,38 @@ require('koneksi.php');
 $username = $_POST['username'];
 $password = md5($_POST['password']);
 $login = $_POST['login'];
-$level = $_POST['level'];
+// $level = $_POST['level'];
 
 if ($login) {
-	$sql = $koneksi->query("select * from users where username='$username' and password='$password' and level='$level'");
+	$sql = $koneksi->query("select * from users where username='$username' and password='$password'");
 	$ketemu = $sql->num_rows;
 	$data = $sql->fetch_assoc();
 
 	if ($ketemu >= 1) {
 		session_start();
 
-		if ($data['level'] == "superadmin" && $level == "superadmin") {
+		if ($data['level'] == "superadmin") {
+
 			$_SESSION['superadmin'] = $data["id"];
+			// header("location:index.php");
 
-			header("location:index3.php");
-		} else if ($data['level'] == "admin" && $level == "admin") {
+			
+			 echo "<script>location.href='target-page.php';</script>";
+
+
+
+		} else if ($data['level'] == "admin") {
+
 			$_SESSION['admin'] = $data["id"];
+			header("location:index_admin.php");
 
-			header("location:index.php");
-		} else if ($data['level'] == "petugas" && $level == "petugas") {
+		} else if ($data['level'] == "petugas") {
+
 			$_SESSION['petugas'] = $data["id"];
+			header("location:index_petugas.php");
 
-			header("location:index2.php");
+		}else {
+			echo '<center><div class="alert alert-danger">Upss...!!! Login gagal. Silakan Coba Kembali</div></center>';
 		}
 	} else {
 		echo '<center><div class="alert alert-danger">Upss...!!! Login gagal. Silakan Coba Kembali</div></center>';

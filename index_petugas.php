@@ -56,7 +56,7 @@ if (empty($_SESSION['petugas'])) {
     <ul class="navbar-nav sidebar sidebar-dark accordion" style="background-color: #A0512B;" id="accordionSidebar">
 
       <!-- Sidebar - Brand -->
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index2.php">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index_petugas.php">
         <div class="sidebar-brand-icon rotate-n-15">
           <i class="fas fa-building"></i>
         </div>
@@ -326,10 +326,10 @@ if (empty($_SESSION['petugas'])) {
 
 
             if ($page == "") {
-              include "home2.php";
+              include "home_petugas.php";
             }
             if ($page == "home2") {
-              include "home2.php";
+              include "home_petugas.php";
             }
             ?>
 
@@ -399,11 +399,6 @@ if (empty($_SESSION['petugas'])) {
       });
     });
   </script>
-
-
-
-
-
 
 
 

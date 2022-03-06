@@ -2,7 +2,8 @@
 
 
 
-$koneksi = new mysqli("localhost", "root", "", "amanah2");
+include('../../koneksi.php');
+
 $no = mysqli_query($koneksi, "select kode_barang from gudang order by kode_barang desc");
 $kdbarang = mysqli_fetch_array($no);
 $kode = $kdbarang['kode_barang'];
