@@ -67,9 +67,8 @@ if (empty($_SESSION['superadmin'])) {
       <!-- Sidebar - Brand -->
       <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
         <div class="sidebar-brand-icon rotate-n-1">
-          <i class="fas fa-building"></i>
+          <img src="./img/logo/logo.png" alt="logo" , style="width: 8em; height: 4em">
         </div>
-        <div class="sidebar-brand-text mx-2">Amanah Bakerey</div>
       </a>
 
       <!-- Divider -->
@@ -88,16 +87,9 @@ if (empty($_SESSION['superadmin'])) {
 
       <!--sidebar start-->
 
-      <li class="d-flex align-items-center justify-content-center">
-        <a class="nav-link">
-          <img style="border-radius: 50%" src="img/<?php echo $data['foto'] ?>" class="img-circle" width="100" height="100" alt="User" /></a>
-      <li class="d-flex align-items-center justify-content-left">
-      </li>
-      </li>
       <li class="nav-item ">
         <a class="nav-link">
-          <div class="d-flex align-items-center justify-content-center" class="name"> <?php echo  $data['nama']; ?></div>
-          </font>
+          <div class="d-flex align-items-center justify-content-center h3 font-weight-bold" class="name"> <?php echo  $data['nama']; ?></div>
           <div class="d-flex align-items-center justify-content-center" class="email"><?php echo $data['level']; ?></div>
         </a>
       </li>

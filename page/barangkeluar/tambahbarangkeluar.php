@@ -155,8 +155,17 @@
   						<?php
 							} else {
 
+								$userId;
+								if (!empty($_SESSION['superadmin'])) {
+									$userId = $_SESSION['superadmin'];
+								} else if (!empty($_SESSION['admin'])) {
+									$userId = $_SESSION['admin'];
+								} else if (!empty($_SESSION['petugas'])) {
+									$userId = $_SESSION['petugas'];
+								}
 
-								$sql = $koneksi->query("insert into barang_keluar (id_transaksi, tanggal, kode_barang, nama_barang, jumlah, total, satuan, tujuan) values('$id_transaksi','$tanggal','$kode_barang','$nama_barang','$jumlah','$total','$satuan','$tujuan')");
+
+								$sql = $koneksi->query("insert into barang_keluar (id_transaksi, tanggal, kode_barang, nama_barang, jumlah, total, satuan, tujuan, id_user) values('$id_transaksi','$tanggal','$kode_barang','$nama_barang','$jumlah','$total','$satuan','$tujuan', '$userId')");
 								$sql2 = $koneksi->query("update gudang set jumlah=(jumlah) where kode_barang='$kode_barang'");
 							?>
 

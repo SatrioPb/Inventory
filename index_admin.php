@@ -67,11 +67,10 @@ if (empty($_SESSION['admin'])) {
     <ul class="navbar-nav sidebar sidebar-dark accordion" style="background-color: #A0512B;" id="accordionSidebar">
 
       <!-- Sidebar - Brand -->
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index_admin.php">
-        <div class="sidebar-brand-icon rotate-n-15">
-          <i class="fas fa-building"></i>
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
+        <div class="sidebar-brand-icon rotate-n-1">
+          <img src="./img/logo/logo.png" alt="logo" , style="width: 8em; height: 4em">
         </div>
-        <div class="sidebar-brand-text mx-2">Amanah Bakery</div>
       </a>
 
       <!-- Divider -->
@@ -90,17 +89,10 @@ if (empty($_SESSION['admin'])) {
 
       <!--sidebar start-->
 
-      <li class="d-flex align-items-center justify-content-center">
-        <a class="nav-link">
-          <img src="img/<?php echo $data['foto'] ?>" class="img-circle" width="80" alt="User" /></a>
-      <li class="d-flex align-items-center justify-content-center">
-      </li>
-      </li>
       <li class="nav-item ">
         <a class="nav-link">
-          <div class="d-flex align-items-center justify-content-center" class="name"> <?php echo  $data['nama']; ?></div>
-          </font>
-          <div class="d-flex align-items-center justify-content-center" class="email"><strong> <?php echo $data['level']; ?></strong></div>
+          <div class="d-flex align-items-center justify-content-center h3 font-weight-bold" class="name"> <?php echo  $data['nama']; ?></div>
+          <div class="d-flex align-items-center justify-content-center" class="email"><?php echo $data['level']; ?></div>
         </a>
       </li>
 

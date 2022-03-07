@@ -12,12 +12,9 @@
           <thead>
             <tr>
               <th>No</th>
-              <!-- <th>NIK</th> -->
+              <th>Nama</th>
               <th>Username</th>
-
               <th>Telepon</th>
-
-              <!-- <th>Password</th> -->
               <th>Level</th>
               <!-- <th>Edit</th> -->
 
@@ -36,16 +33,11 @@
             ?>
 
               <tr>
-                <td><?php echo $no++; ?></td>
-                <!-- <td><?php echo $data['nik'] ?></td> -->
+                <td><?php echo $no++; ?></td>>
                 <td><?php echo $data['nama'] ?></td>
-
+                <td><?php echo $data['username'] ?></td>
                 <td><?php echo $data['telepon'] ?></td>
-                <!--td><?php echo $data['username'] ?></td>
-
-                <!-- <td><?php echo $data['password'] ?></td> -->
                 <td><?php echo $data['level'] ?></td>
-                <!-- <td><img src="img/<?php echo $data['foto'] ?>" width="50" height="50" alt=""> </td> -->
 
               </tr>
             <?php } ?>

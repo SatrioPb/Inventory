@@ -1,3 +1,5 @@
+
+
 <!-- Begin Page Content -->
 <div class="container-fluid">
 
@@ -7,7 +9,6 @@
       <h6 class="m-0 font-weight-bold text-primary">Barang Keluar</h6>
     </div>
     <div class="card-body">
-
 
 
       <div class="table-responsive">

@@ -140,6 +140,14 @@ $tanggal_masuk = date("Y-m-d");
 
 
 					<?php
+					$userId;
+					if (!empty($_SESSION['superadmin'])) {
+						$userId = $_SESSION['superadmin'];
+					} else if (!empty($_SESSION['admin'])) {
+						$userId = $_SESSION['admin'];
+					} else if (!empty($_SESSION['petugas'])) {
+						$userId = $_SESSION['petugas'];
+					}
 
 					if (isset($_POST['simpan'])) {
 						$id_transaksi = $_POST['id_transaksi'];
@@ -165,7 +173,7 @@ $tanggal_masuk = date("Y-m-d");
 
 
 
-						$sql = $koneksi->query("insert into barang_masuk (id_transaksi, tanggal, kode_barang, nama_barang, jumlah, satuan, pengirim) values('$id_transaksi','$tanggal','$kode_barang','$nama_barang','$jumlah','$satuan','$pengirim')");
+						$sql = $koneksi->query("insert into barang_masuk (id_transaksi, tanggal, kode_barang, nama_barang, jumlah, satuan, pengirim, id_user) values('$id_transaksi','$tanggal','$kode_barang','$nama_barang','$jumlah','$satuan','$pengirim', '$userId')");
 
 
 

@@ -8,7 +8,6 @@
     </div>
     <div class="card-body">
 
-
       <div class="table-responsive">
         <table class="table table-bordered" id="mauexport" width="100%" cellspacing="0">
           <thead>

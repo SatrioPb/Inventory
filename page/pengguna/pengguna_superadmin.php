@@ -15,12 +15,9 @@
           <thead>
             <tr>
               <th>No</th>
-              <!-- <th>NIK</th> -->
+              <th>Name</th>
               <th>Username</th>
-
               <th>Telepon</th>
-
-              <!-- <th>Password</th> -->
               <th>Level</th>
               <th>Edit</th>
 
@@ -39,13 +36,9 @@
 
               <tr>
                 <td><?php echo $no++; ?></td>
-                <!-- <td><?php echo $data['nik'] ?></td> -->
+                <td><?php echo $data['name'] ?></td>
                 <td><?php echo $data['username'] ?></td>
-
                 <td><?php echo $data['telepon'] ?></td>
-
-
-                <!-- <td><?php echo $data['password'] ?></td> -->
                 <td><?php echo $data['level'] ?></td>
 
                 <td>

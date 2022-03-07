@@ -111,19 +111,21 @@ if ($login) {
 			// header("location:index.php");
 
 			
-			 echo "<script>location.href='target-page.php';</script>";
+			 echo "<script>location.href='index.php';</script>";
 
 
 
 		} else if ($data['level'] == "admin") {
 
 			$_SESSION['admin'] = $data["id"];
-			header("location:index_admin.php");
+			// header("location:index_admin.php");
+			 echo "<script>location.href='index_admin.php';</script>";
 
 		} else if ($data['level'] == "petugas") {
 
 			$_SESSION['petugas'] = $data["id"];
-			header("location:index_petugas.php");
+			// header("location:index_petugas.php");
+			 echo "<script>location.href='index_petugas.php';</script>";
 
 		}else {
 			echo '<center><div class="alert alert-danger">Upss...!!! Login gagal. Silakan Coba Kembali</div></center>';
