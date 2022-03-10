@@ -69,7 +69,7 @@ if (empty($_SESSION['admin'])) {
       <!-- Sidebar - Brand -->
       <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
         <div class="sidebar-brand-icon rotate-n-1">
-          <img src="./img/logo/logo.png" alt="logo" , style="width: 8em; height: 4em">
+          <img src="./img/logo/logo.jpg" alt="logo" , style="width: 8em; height: 4em">
         </div>
       </a>
 
@@ -133,7 +133,6 @@ if (empty($_SESSION['admin'])) {
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Menu:</h6>
             <a class="collapse-item" href="?page=gudang">Data Barang</a>
-            <a class="collapse-item" href="?page=jenisbarang">Jenis Barang</a>
             <!-- <a class="collapse-item" href="?page=satuanbarang">Satuan Barang</a>
             <a class="collapse-item" href="?page=supplier">Data Supplier</a> -->
 
@@ -272,22 +271,6 @@ if (empty($_SESSION['admin'])) {
               }
             }
 
-
-            if ($page == "jenisbarang") {
-              if ($aksi == "") {
-                include "page/jenisbarang/jenisbarang.php";
-              }
-              if ($aksi == "tambahjenis") {
-                include "page//jenisbarang/tambahjenis.php";
-              }
-              if ($aksi == "ubahbarang") {
-                include "page/jenisbarang/ubahbarang.php";
-              }
-
-              if ($aksi == "hapusbarang") {
-                include "page/jenisbarang/hapusbarang.php";
-              }
-            }
 
             if ($page == "satuanbarang") {
               if ($aksi == "") {
@@ -537,7 +520,7 @@ if (empty($_SESSION['admin'])) {
       $('#mauexport').DataTable({
         dom: 'Bfrtip',
         buttons: [
-          'copy', 'csv', 'excel', 'pdf', 'print'
+          'copy', 'excel', 'pdf', 'print'
         ]
       });
     });
