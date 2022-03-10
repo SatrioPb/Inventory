@@ -69,7 +69,7 @@ if (empty($_SESSION['admin'])) {
       <!-- Sidebar - Brand -->
       <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
         <div class="sidebar-brand-icon rotate-n-1">
-          <img src="./img/logo/logo.jpg" alt="logo" , style="width: 8em; height: 4em">
+          <img src="./img/logo/logo.png" alt="logo" , style="width: 8em; height: 4em">
         </div>
       </a>
 
