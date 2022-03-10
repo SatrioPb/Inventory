@@ -255,22 +255,6 @@ if (empty($_SESSION['admin'])) {
             }
 
 
-            if ($page == "supplier") {
-              if ($aksi == "") {
-                include "page/supplier/supplier.php";
-              }
-              if ($aksi == "tambahsupplier") {
-                include "page//supplier/tambahsupplier.php";
-              }
-              if ($aksi == "ubahsupplier") {
-                include "page/supplier/ubahsupplier.php";
-              }
-
-              if ($aksi == "hapussupplier") {
-                include "page/supplier/hapussupplier.php";
-              }
-            }
-
 
             if ($page == "satuanbarang") {
               if ($aksi == "") {
