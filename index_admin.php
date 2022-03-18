@@ -255,38 +255,8 @@ if (empty($_SESSION['admin'])) {
             }
 
 
-            if ($page == "supplier") {
-              if ($aksi == "") {
-                include "page/supplier/supplier.php";
-              }
-              if ($aksi == "tambahsupplier") {
-                include "page//supplier/tambahsupplier.php";
-              }
-              if ($aksi == "ubahsupplier") {
-                include "page/supplier/ubahsupplier.php";
-              }
 
-              if ($aksi == "hapussupplier") {
-                include "page/supplier/hapussupplier.php";
-              }
-            }
-
-
-            if ($page == "satuanbarang") {
-              if ($aksi == "") {
-                include "page/satuanbarang/satuan.php";
-              }
-              if ($aksi == "tambahsatuan") {
-                include "page//satuanbarang/tambahsatuan.php";
-              }
-              if ($aksi == "ubahsatuan") {
-                include "page/satuanbarang/ubahsatuan.php";
-              }
-
-              if ($aksi == "hapussatuan") {
-                include "page/satuanbarang/hapussatuan.php";
-              }
-            }
+          
 
 
 

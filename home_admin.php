@@ -35,32 +35,6 @@
     </div>
 
 
-    <!-- <div class="col-xl-3 col-md-6 mb-4">
-      <div class="card border-left-info shadow h-100 py-2">
-        <div class="card-body">
-          <div class="row no-gutters align-items-center">
-            <div class="col mr-2">
-              <a href="?page=supplier">
-                <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
-                  <h4>Data Supplier</h4>
-                </div>
-                <div class="row no-gutters align-items-center">
-                  <div class="col-auto">
-
-                  </div>
-                  <div class="col">
-
-                  </div>
-                </div>
-            </div>
-            <div class="col-auto">
-              <i class="fas fa-clipboard-list fa-2x text-black-300" style=" color:#A0512B"></i>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> -->
-
 
     <!-- Earnings (Monthly) Card Example -->
     <div class="col-xl-3 col-md-6 mb-4">
