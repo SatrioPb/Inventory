@@ -14,6 +14,17 @@ if (empty($_SESSION['admin'])) {
 
 
 
+$user = $koneksi->query("SELECT COUNT(id) FROM users");
+$totaluser = $user->fetch_row()[0];
+
+$barang = $koneksi->query("SELECT COUNT(id) FROM gudang");
+$totalbarang = $barang->fetch_row()[0];
+
+$barangmasuk = $koneksi->query("SELECT COUNT(id) FROM barang_masuk");
+$totalbarangmasuk = $barangmasuk->fetch_row()[0];
+
+$barangkeluar = $koneksi->query("SELECT COUNT(id) FROM barang_keluar");
+$totalbarangkeluar = $barangkeluar->fetch_row()[0];
 
 
 
@@ -256,7 +267,7 @@ if (empty($_SESSION['admin'])) {
 
 
 
-          
+
 
 
 

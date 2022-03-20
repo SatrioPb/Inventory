@@ -13,6 +13,14 @@ if (empty($_SESSION['petugas'])) {
 }
 
 
+$barang = $koneksi->query("SELECT COUNT(id) FROM gudang");
+$totalbarang = $barang->fetch_row()[0];
+
+$barangmasuk = $koneksi->query("SELECT COUNT(id) FROM barang_masuk");
+$totalbarangmasuk = $barangmasuk->fetch_row()[0];
+
+$barangkeluar = $koneksi->query("SELECT COUNT(id) FROM barang_keluar");
+$totalbarangkeluar = $barangkeluar->fetch_row()[0];
 
 
 

@@ -3,8 +3,13 @@
 		var stok = document.getElementById('stok').value;
 		var jumlahmasuk = document.getElementById('jumlahmasuk').value;
 		var result = parseInt(stok) + parseInt(jumlahmasuk);
-		if (!isNaN(result)) {
-			document.getElementById('jumlah').value = result;
+		if (parseInt(jumlahmasuk) < 0) {
+			document.getElementById('jumlahmasuk').value = "";
+			document.getElementById('jumlah').value = "";
+		} else {
+			if (!isNaN(result)) {
+				document.getElementById('jumlah').value = result;
+			}
 		}
 	}
 </script>

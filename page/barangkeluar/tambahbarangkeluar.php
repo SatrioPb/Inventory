@@ -3,8 +3,21 @@
   		var stok = document.getElementById('stok').value;
   		var jumlahkeluar = document.getElementById('jumlahkeluar').value;
   		var result = parseInt(stok) - parseInt(jumlahkeluar);
-  		if (!isNaN(result)) {
-  			document.getElementById('total').value = result;
+
+  		if (parseInt(jumlahkeluar) < 0) {
+  			document.getElementById('jumlahkeluar').value = "";
+  			document.getElementById('total').value = "";
+  		} else {
+
+  			if (!isNaN(result)) {
+  				if (result < 0) {
+  					document.getElementById('jumlahkeluar').value = stok
+  					document.getElementById('total').value = 0;
+  					console.log("error");
+  				} else {
+  					document.getElementById('total').value = result;
+  				}
+  			}
   		}
   	}
   </script>
@@ -34,6 +47,7 @@
 
 
 	$tanggal_keluar = date("Y-m-d");
+
 
 
 	?>
@@ -93,6 +107,9 @@
   						<label for="">Jumlah</label>
   						<div class="form-group">
   							<div class="form-line">
+  								<?php
+
+									?>
   								<input type="text" name="jumlahkeluar" id="jumlahkeluar" onkeyup="sum()" class="form-control" />
 
 
@@ -135,6 +152,7 @@
 							$barang = $_POST['barang'];
 							$pecah_barang = explode(".", $barang);
 							$kode_barang = $pecah_barang[0];
+
 							$nama_barang = $pecah_barang[1];
 							$jumlah = $_POST['jumlahkeluar'];
 
